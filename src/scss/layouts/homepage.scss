@@ -1,0 +1,52 @@
+@import "../base/variables";
+
+.header {
+	background:url(../images/brunki.png) top left , url(../images/bg.jpg) center/cover;
+	background-repeat: no-repeat;
+	
+	padding: 0;
+	position: relative;
+	z-index: 3;	
+}
+
+nav {
+	background: rgba(31,21,13, .72);
+    top: 0;
+    box-shadow: -1px 7px 15px 10px rgba(31,21,13, .72);
+    z-index: 10;
+}
+
+
+.nav-link {
+	text-transform: uppercase;
+	font-family: $bold-font;
+	color:white;
+	font-size: 20px;
+}
+
+h1 {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	font-family: "Lobster-Regular";
+	font-size: 12em;
+	text-align: center;
+	background: url(../images/bg.jpg);
+	background-attachment: fixed;
+	-webkit-background-clip:text;
+	-webkit-text-fill-color: transparent;
+
+	&:before {
+		content: attr(data-text);
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: -1;
+		text-shadow: 0px 0px 13px #ffffff47, 
+					2px 0px 26px #ffffff70, 
+					0px 5px 10px #351900, 
+					0px 0px 20px #ffffff47;
+	}
+}	

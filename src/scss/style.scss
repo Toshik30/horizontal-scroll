@@ -1,0 +1,36 @@
+@import "base/normalize";
+@import "base/fonts";
+@import "base/variables";
+@import "base/mixins";
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: $primary-font, sans-serif;
+}
+html {
+	scroll-behavior: smooth;
+}
+
+h2 {
+	color: #000;
+	font-size: 36px;
+	font-family: $bold-font, sans-serif;
+}
+h3 {
+	font-size: 30px;
+	font-family: $bold-font, sans-serif;
+
+}
+p {
+	font-size: 18px;
+	font-weight: 500;
+	background: #ffffff99;
+	border-radius: 25px;
+}
+
+@import "layouts/homepage";
+@import "layouts/about-us";
+@import "layouts/prices";
+@import "layouts/gallery";
