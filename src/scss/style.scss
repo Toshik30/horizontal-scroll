@@ -9,28 +9,78 @@
 	margin: 0;
 	font-family: $primary-font, sans-serif;
 }
-html {
-	scroll-behavior: smooth;
-}
 
 h2 {
 	color: #000;
 	font-size: 36px;
 	font-family: $bold-font, sans-serif;
+
+	@include for-phone {
+		font-size: 30px;
+	}
 }
+
 h3 {
 	font-size: 30px;
 	font-family: $bold-font, sans-serif;
 
+	@include for-phone {
+		font-size: 26px;
+	}
 }
+
 p {
 	font-size: 18px;
 	font-weight: 500;
 	background: #ffffff99;
 	border-radius: 25px;
+
+	@include for-phone {
+		font-size: 16px;
+	}
+}
+#app {
+	position: fixed;
+	right: 50px;
+	bottom: 50px;
+	width: 60px;
+	height: 60px;
+	background-color: #f44336;
+	color: #fff;
+	font-size: 30px;
+	padding: 15px;
+	line-height: 1;
+	border-radius: 50%;
+	animation: pulse 1s cubic-bezier(0,0,0,0) 0.3s infinite;
+
+	@include for-phone {
+		bottom: 20px;
+		right: 20px;
+	}
+
+	i {
+		text-shadow: 0 2p 10px #b52217;
+		animation: changeSize 1s cubic-bezier(0,0,0,0) 0s infinite;
+	}
+}
+@keyframes pulse {
+	0% { box-shadow: 0 0 0 0px #fddcda;}
+	25% {box-shadow: 0 0 0 4px #fddcda;}
+	50% {box-shadow: 0 0 0 6px #fef2f2;}
+	75% {box-shadow: 0 0 0 8px #fef2f1;}
+	100% {box-shadow: 0 0 0 10px #fff;}
+}
+@keyframes changeSize {
+	0% { transform: scale(1);}
+	25% { transform: scale(1.2);}
+	50% { transform: scale(0.8);}
+	75% { transform: scale(1.1);}
+	100% { transform: scale(1);}
+	
 }
 
 @import "layouts/homepage";
 @import "layouts/about-us";
 @import "layouts/prices";
 @import "layouts/gallery";
+@import "layouts/contacts";

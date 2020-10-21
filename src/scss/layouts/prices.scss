@@ -17,11 +17,16 @@
   left: 0;
   pointer-events: none;
 
-  img {
-  max-width: 100px;
-  height: 100px;
-  z-index: 0;
-}
+    img {
+      max-width: 100px;
+      height: 100px;
+      z-index: 0;
+
+      @include for-phone {
+        max-width: 65px;
+        height: 65px;
+    }
+  }
 }
  .set div {
   position: absolute;
@@ -113,9 +118,17 @@
     padding: 15px 25px;
     background: none;
     margin: 0;
+
+    @include for-phone {
+       padding: 8px 12px;
+    }
   }
   strong {
     font-size: 22px;
     text-align: center;
+
+    @include for-phone {
+        font-size: 16px;
+    }
   }
 }

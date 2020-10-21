@@ -3,12 +3,17 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Horizontal-scroll</title>
+    <title href="#">В кругу друзей</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
     <!--  fullpage  --> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/solid.min.css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
      
   </head>
   <body>
@@ -16,8 +21,15 @@
       <%= _.template(require('./includes/homepage.html').default)(data) %>
       <%= _.template(require('./includes/about-us.html').default)(data) %>
       <%= _.template(require('./includes/prices.html').default)(data) %> 
-      <%= _.template(require('./includes/gallery.html').default)(data) %> 
+      <%= _.template(require('./includes/gallery.html').default)(data) %>
+      <%= _.template(require('./includes/contacts.html').default)(data) %> 
    </div>
+    <a href="tel:+380953022000">
+      <div id="app">
+      <i class="fas fa-phone"></i>
+    </div>
+    </a>
+
    <!-- fullpage -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js"></script>
@@ -29,17 +41,11 @@
 <script type="text/javascript">
       new fullpage('#fullpage', {
         navigationPosition: 'right',
-        navigationTooltips: ['#main'],
-        navigation: true,
-        navigationPosition: 'right',
-        fixedElements: '#navigation, #fp-nav, #footer',
+        fixedElements: '#navigation, #fp-nav, #footer', 
         cards: true,
         cardsOptions: {perspective: 100, fadeContent: true, fadeBackground: true},
-      });
-
-      
-      
-  </script>
+      });  
+</script>
  
   </body>
 </html>

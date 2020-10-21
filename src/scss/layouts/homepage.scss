@@ -1,9 +1,9 @@
 @import "../base/variables";
+@import "../base/mixins";
 
 .header {
 	background:url(../images/brunki.png) top left , url(../images/bg.jpg) center/cover;
 	background-repeat: no-repeat;
-	
 	padding: 0;
 	position: relative;
 	z-index: 3;	
@@ -14,6 +14,17 @@ nav {
     top: 0;
     box-shadow: -1px 7px 15px 10px rgba(31,21,13, .72);
     z-index: 10;
+
+    @include for-phone {
+		box-shadow: -1px 5px 10px 7px rgba(31,21,13, .72);
+
+	}
+	span {
+
+		@include for-phone {
+			font-size: 14px;
+		}
+	}
 }
 
 
@@ -22,6 +33,10 @@ nav {
 	font-family: $bold-font;
 	color:white;
 	font-size: 20px;
+
+	@include for-phone {
+		font-size: 18px;
+	}
 }
 
 h1 {
@@ -48,5 +63,8 @@ h1 {
 					2px 0px 26px #ffffff70, 
 					0px 5px 10px #351900, 
 					0px 0px 20px #ffffff47;
+	}
+	@include for-phone {
+		font-size: 6em;
 	}
 }	
